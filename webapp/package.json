@@ -25,7 +25,8 @@
   "scripts": {
     "deploy": "gh-pages -d build -b deploy",
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build-wasm": "wasm-pack build ..",
+    "build": "npm run build-wasm && react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
